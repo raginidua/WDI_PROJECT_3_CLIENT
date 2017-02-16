@@ -1,0 +1,20 @@
+{
+  "name": "angular-gulp-setup",
+  "description": "Angular App",
+  "main": "index.js",
+  "authors": [
+    "raginidua <raginidua1@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8"
+  }
+}
