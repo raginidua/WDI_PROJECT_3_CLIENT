@@ -4,6 +4,6 @@
   <li ng-repeat="piece in pieces.pieces">
     <h3 ui-sref="piecesShow({ id: piece.id })">{{ piece.title }}</h3>
     <h4>{{ piece.description }}</h4>
-    <h4>{{ piece.user }}</h4>
+    <h4>{{ piece.user.first_name }} {{ piece.user.last_name }}</h4>
   </li>
 </ul>
