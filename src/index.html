@@ -1,13 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="artApp">
   <head>
     <meta charset="utf-8">
-    <title>Angular Stack Setup</title>
+    <title>Art App</title>
+    <base href="/">
     <!-- inject:js -->
     <!-- endinject -->
     <!-- inject:css -->
     <!-- endinject -->
   </head>
-  <body>
+  <body ng-controller="HomeCtrl as home">
+    <nav class="tabs">
+      <a ui-sref="home">Home</a>
+      <a ui-sref="about">About</a>
+      <a ui-sref="usersIndex">List of Users</a>
+      <a ui-sref="piecesIndex">List of Pieces</a>
+    </nav>
+    <h1>ART APP {{ 1 + 1 }}</h1>
+    <main ui-view></main>
   </body>
 </html>
