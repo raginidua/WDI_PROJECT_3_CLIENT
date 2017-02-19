@@ -1,3 +1,3 @@
 angular
 .module('artApp')
-.constant('API', `localhost:3000`);
+.constant('API', `http://localhost:3000`);

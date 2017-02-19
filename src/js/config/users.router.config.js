@@ -24,6 +24,16 @@ function userRouter($locationProvider, $stateProvider, $urlRouterProvider) {
       url: '/users',
       templateUrl: '/js/views/users/index.html',
       controller: 'UsersIndexCtrl as usersIndex'
+    })
+    .state('usersRegister', {
+      url: '/users/register',
+      templateUrl: '/js/views/users/register.html',
+      controller: 'UsersRegisterCtrl as usersRegister'
+    })
+    .state('usersLogin', {
+      url: '/users/login',
+      templateUrl: '/js/views/users/login.html',
+      controller: 'UsersLoginCtrl as usersLogin'
     });
 
   //if none of the above names found then redirect to '/'
