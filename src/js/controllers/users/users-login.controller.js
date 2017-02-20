@@ -2,8 +2,8 @@ angular
 .module('artApp')
 .controller('UsersLoginCtrl', UsersLoginCtrl);
 
-UsersLoginCtrl.$inject = ['User', 'TokenService'];
-function UsersLoginCtrl(User, TokenService) {
+UsersLoginCtrl.$inject = ['User'];
+function UsersLoginCtrl(User) {
   const vm = this;
 
   vm.usersLogin = () => {
@@ -11,7 +11,6 @@ function UsersLoginCtrl(User, TokenService) {
     .$promise
     .then(data => {
       console.log(data);
-      TokenService.setToken(data.token);
     }, err => {
       console.log(err);
     });
