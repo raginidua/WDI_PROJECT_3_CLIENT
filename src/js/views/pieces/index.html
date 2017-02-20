@@ -1,5 +1,5 @@
 <h1>Works of Art List</h1>
-<h2>{{ pieces.length }}</h2>
+<h2>{{ pieces.pieces.length }}</h2>
 <ul class="list-unstyled">
   <li ng-repeat="piece in pieces.pieces">
     <h3 ui-sref="piecesShow({ id: piece.id })">{{ piece.title }}</h3>
