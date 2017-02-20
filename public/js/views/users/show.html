@@ -1,4 +1,4 @@
 <h1>Users Show Page</h1>
 <h2>{{ users.user.first_name }} {{ users.user.last_name }}</h2>
-<h2>{{ users.user.username }}</h2>
 <h2>{{ users.user.art_school }}</h2>
+<h3 ng-repeat="piece in users.user.pieces" ui-sref="piecesShow({ id: piece.id })">{{ piece.title }}<img src="{{ piece.image }}", width=150></h3>

@@ -1,4 +1,5 @@
 <h1>Show Page</h1>
 <h2>{{ pieces.piece.title }}</h2>
 <h2>{{ pieces.piece.description }}</h2>
-<h2>{{ pieces.piece.user.first_name }} {{ pieces.piece.user.last_name }}</h2>
+<image src="{{ pieces.piece.image }}", width=300>
+<h2 ui-sref="usersShow({ id: pieces.piece.user.id })">{{ pieces.piece.user.first_name }} {{ pieces.piece.user.last_name }}</h2>

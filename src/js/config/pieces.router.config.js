@@ -15,6 +15,11 @@ function pieceRouter($locationProvider, $stateProvider, $urlRouterProvider) {
       templateUrl: '/js/views/pieces/index.html',
       controller: 'PiecesIndexCtrl as pieces'
     })
+    .state('piecesNew', {
+      url: '/pieces/new',
+      templateUrl: '/js/views/pieces/new.html',
+      controller: 'PiecesNewCtrl as pieces'
+    })
     .state('piecesShow', {
       url: '/pieces/:id',
       templateUrl: '/js/views/pieces/show.html',

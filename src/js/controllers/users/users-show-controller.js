@@ -10,6 +10,7 @@ function UsersShowCtrl(API, $http, $stateParams, $resource) {
     { id: '@_id' });
 
   vm.user = User.get($stateParams);
+  console.log(vm.user);
   //
   // $http({
   //   method: 'get',
