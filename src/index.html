@@ -26,6 +26,9 @@
     <li ng-hide="main.user">
       <a ui-sref="usersLogin">Login</a>
     </li>
+    <!-- <li ng-show="main.user">
+      <a ui-sref="usersShow({ id: currentUser.id })">My Profile</a>
+    </li> -->
     <li ng-show="main.user">
       <a ui-sref="usersIndex">Users</a>
     </li>

@@ -15,7 +15,7 @@ function UsersIndexCtrl(API, $http, $resource) {
   // const Artist = 'Artist';
 
   function usersIndex(){
-    vm.users = User.query({ role: 'Artist' });
+    vm.users = User.query();
     console.log(vm.users);
   }
 
