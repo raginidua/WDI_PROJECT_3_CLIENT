@@ -9,7 +9,7 @@ function AuthInterceptor(API, TokenService) {
       const token = TokenService.getToken();
       if (config.url.indexOf(API) === 0 && token) {
         config.headers.Authorization = `Bearer ${token}`;
-      }
+      } 
 
       return config;
     },

@@ -2,5 +2,6 @@
 angular
   .module('artApp', [
     'ui.router',
-    'ngResource'
+    'ngResource',
+    'angular-jwt'
   ]);
