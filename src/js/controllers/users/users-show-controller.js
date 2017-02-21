@@ -11,6 +11,21 @@ function UsersShowCtrl(API, $http, $stateParams, $resource) {
 
   vm.user = User.get($stateParams);
   console.log(vm.user);
+
+  // User
+  //   .get($stateParams)
+  //   .$promise
+  //   .then(data => {
+  //     vm.user = data;
+  //     vm.user.pieces = data.pieces;
+  //     console.log(vm.user);
+      // vm.pieces.bids.sort((a,b) => {
+      //   return b.price - a.price;
+      // });
+      // vm.highestBid = vm.piece.bids[0].price
+    // });
+
+
   //
   // $http({
   //   method: 'get',

@@ -6,8 +6,10 @@
 <h4 ng-repeat="bid in pieces.piece.bids">£ {{ bid.price }}, {{ bid.bidder.first_name }} {{ bid.bidder.last_name }}</h4>
 <h2 ui-sref="usersShow({ id: pieces.piece.user.id })">{{ pieces.piece.user.first_name }} {{ pieces.piece.user.last_name }}</h2>
 
-<h3>Place bid here</h3>
-<form ng-submit="pieces.placeBid()">
-  £<input type="number" ng-model="pieces.bid.price" min="{{pieces.bidMinimum}}">
-  <input type="submit" name="" value="">
-</form>
+<div ng-if="main.user.role !== 'Artist'">
+  <h3>Place bid here</h3>
+  <form ng-submit="pieces.placeBid()">
+    £<input type="number" ng-model="pieces.bid.price" min="{{pieces.bidMinimum}}">
+    <input type="submit" name="" value="">
+  </form>
+</div>

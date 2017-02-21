@@ -1,7 +1,10 @@
 <h1 ng-if="main.user.id === users.user.id">My profile</h1>
 <h2>{{ users.user.first_name }} {{ users.user.last_name }}</h2>
 <h2>{{ users.user.art_school }}</h2>
-<h2 ng-if="users.user.id === main.user.id && main.user.role === 'Artist'">My Paintings</h2>
-<h3 ng-repeat="piece in users.user.pieces" ui-sref="piecesShow({ id: piece.id })">{{ piece.title }}<img src="{{ piece.image }}", width=150></h3>
+<h2 ng-if="users.user.id === main.user.id && main.user.role === 'Artist'">My Work</h2>
+<h3 ng-repeat="piece in users.user.pieces" ui-sref="piecesShow({ id: piece.id })">{{ piece.title }} {{ user.bids }}<img src="{{ piece.image }}", width=150>
+<p ng-repeat="bid in piece.bids">Current Highest Bid: £ {{ bid.price }}</p></h3>
+
+
 <h2 ng-if="users.user.id === main.user.id && main.user.role !== 'Artist'">My Bids</h2>
-<h3 ng-repeat="bid in users.user.bids">{{ bid.price }}, {{ bid.piece.title }}</h3>
+<h3 ng-repeat="bid in users.user.bids">£ {{ bid.price }}, {{ bid.work.title }} <img src="{{ bid.work.image }}", width=150></h3>
