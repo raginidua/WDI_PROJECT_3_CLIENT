@@ -1,6 +1,21 @@
 <div class="row top">
   <div class="col s12 m8 offset-m2">
     <form class="col s12" ng-submit="usersRegister.usersRegister()">
+      <fieldset class="form-group">
+        <legend>I am...</legend>
+        <div class="form-check">
+          <label class="form-check-label role">
+            <input type="radio" class="form-check-input validate" name="optionsRadios" id="role" value="Artist" ng-model="usersRegister.user.user.role">
+            An Artist
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label role">
+            <input type="radio" class="form-check-input validate" name="optionsRadios" id="role1" value="Customer" ng-model="usersRegister.user.user.role">
+            A Customer
+          </label>
+        </div>
+      </fieldset>
       <div class="row">
         <div class="row">
           <div class="input-field col s12 m6">
@@ -22,6 +37,12 @@
           <div class="input-field col s12">
             <input id="email" type="email" class="validate" ng-model="usersRegister.user.user.email">
             <label for="email">Email</label>
+          </div>
+        </div>
+        <div class="row" ng-if="usersRegister.user.user.role === 'Artist'">
+          <div class="input-field col s12">
+            <input id="art_school" type="text" class="validate" ng-model="usersRegister.user.user.art_school">
+            <label for="art_school">Art School</label>
           </div>
         </div>
         <div class="row">

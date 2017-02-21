@@ -16,7 +16,6 @@ function UsersIndexCtrl(API, $http, $resource) {
 
   function usersIndex(){
     vm.users = User.query();
-    console.log(vm.users);
   }
 
   // usersIndex();
@@ -27,4 +26,15 @@ function UsersIndexCtrl(API, $http, $resource) {
   //       vm.users    = response.data;
   //     });
   // }
+
+  vm.searchByName = function() {
+    vm.searchCriteria = 'All';
+    User
+    .search({searchTerm: vm.searchTerm})
+    .$promise
+    .then(response => {
+      vm.users = response.users;
+    });
+  };
+
 }
