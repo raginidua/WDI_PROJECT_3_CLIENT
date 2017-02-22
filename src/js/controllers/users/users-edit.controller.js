@@ -18,7 +18,8 @@ function UsersEditCtrl(API, $http, $resource, $stateParams, $state) {
       .update({ id: $stateParams.id }, vm.user)
       .$promise
       .then(() => {
-        $state.go('usersShow');
+        console.log(vm.user);
+        $state.go('usersShow', { id: vm.user.id });
       });
   }
 

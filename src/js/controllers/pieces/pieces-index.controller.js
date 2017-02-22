@@ -14,7 +14,7 @@ function PiecesIndexCtrl(API, $http, $resource) {
 
   function piecesIndex(){
     vm.pieces = Piece.query();
-    console.log(vm.pieces);
+    console.log('pieces', vm.pieces);
   }
 
   // $http({

@@ -1,5 +1,5 @@
 <h1 ng-if="main.user.id === users.user.id">My profile</h1>
-<h2 ui-sref="usersShow({ id: main.user.id })">Edit My Profile</h2>
+<p ui-sref="usersEdit({ id: main.user.id })">Edit My Profile</p>
 <h2>{{ users.user.first_name }} {{ users.user.last_name }}</h2>
 <h2>{{ users.user.art_school }}</h2>
 <h2 ng-if="users.user.id === main.user.id && main.user.role === 'Artist'">My Work</h2>
@@ -12,9 +12,21 @@
 <h2>My Bids</h2>
 <h3>Work I have the highest Bid on</h3>
 
-<h3 ng-repeat="bid in users.user.bids">£ {{ bid.price }}, {{ bid.work.title }} <img src="{{ bid.work.image }}", width=150><p ng-repeat="bid in bid.work.bids | orderBy:'price':true | limitTo:1">{{ bid.price }}</p></h3>
+<div ng-repeat="bid in users.highBids">
+  <h3>£ {{ bid.price }}, {{ bid.work.title }} </h3>
+  <img src="{{ bid.work.image }}", width=150 />
+</div>
 
+<h3>Work I do not have the highest Bid on</h3>
+<div ng-repeat="bid in users.lowBids">
+  <h3>£ {{ bid.price }}, {{ bid.work.title }} </h3>
+  <img src="{{ bid.work.image }}", width=150 />
+</div>
 
-<h3>Work I have been outbid on</h3>
-<h3 ng-repeat="bid in users.user.bids">£ {{ bid.price }}, {{ bid.work.title }} <img src="{{ bid.work.image }}", width=150></h3>
+<h3>Work I have previously bought</h3>
+<div ng-repeat="bid in users.lowBids" where>
+  <h3>£ {{ bid.price }}, {{ bid.work.title }} </h3>
+  <img src="{{ bid.work.image }}", width=150 />
+</div>
+
 </div>
