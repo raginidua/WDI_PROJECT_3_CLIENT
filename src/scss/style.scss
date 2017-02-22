@@ -1,6 +1,6 @@
 // Import all of your scss files here
 body {
-  background: #BEE7B8;
+  background: #3949ab;
 }
 
 // nav.tabs {
@@ -19,6 +19,7 @@ body {
 //   }
 // }
 
+
 // .box {
 //   height: 100%;
 //   width: 100%;
@@ -29,16 +30,25 @@ body {
 // }
 
   .navbar {
+    background-color: #c5cae9;
+    margin: 0;
+    padding: 0;
+    border: 0px;
+    border-radius: 0;
     .container-fluid {
       .collapse {
         font-family: 'Mada', sans-serif;
         font-size: 18px;
+        ul {
+          color: #3949ab;
+        }
       }
     }
   }
 
   .homePage {
     height: 300vh;
+    margin: 0;
     .introPage {
       position: relative;
       font-family: 'Mada', sans-serif;
@@ -47,16 +57,19 @@ body {
       // bottom: 50%;
       height: 100vh;
       width: 100%;
-      background-color: #BEE7B8;
+      background-color: #3949ab;
       margin: 0;
       padding: 0;
       h1 {
         font-size: 100px;
         text-align: center;
+        color: white;
+        padding-top: 60px;
       }
       h6 {
-        margin-top: 40vh;
+        margin-top: 30vh;
         text-align: center;
+        color: white;
       }
     }
     .secondPage {
@@ -127,6 +140,19 @@ body {
     background-color: red;
     width: 500px;
   }
+
+.loginPage {
+  background-color: #7D80DA;
+  height: 100vh;
+  width: 100%;
+}
+
+
+
+
+
+
+
 
 // .container {
 //   padding: 0;

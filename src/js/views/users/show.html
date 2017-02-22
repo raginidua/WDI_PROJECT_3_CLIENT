@@ -1,35 +1,38 @@
-<h1 ng-if="main.user.id === users.user.id">My profile</h1>
-<h1 ng-if="main.user.id !== users.user.id">{{ users.user.first_name }} {{ users.user.last_name }}</h1>
-<p  ng-if="main.user.id === users.user.id" sui-sref="usersEdit({ id: main.user.id })">Edit My Profile</p>
-<h4>{{ users.user.art_school }}</h4>
-<br>
+<div class="container">
+  <h1 ng-if="main.user.id === users.user.id">My profile</h1>
+  <h1 ng-if="main.user.id !== users.user.id">{{ users.user.first_name }} {{ users.user.last_name }}</h1>
+  <p  ng-if="main.user.id === users.user.id" sui-sref="usersEdit({ id: main.user.id })">Edit My Profile</p>
+  <h4>{{ users.user.art_school }}</h4>
+  <br>
 
-<h2 ng-if="users.user.id === main.user.id && main.user.role === 'Artist'">My Work</h2>
-<div ng-repeat="piece in users.user.pieces">
-  <img src="{{ piece.image}}", width=150>
-  <h4 ui-sref="piecesShow({ id: piece.id })">{{ piece.title }}</h4>
-  <h5 ng-repeat="bid in piece.bids | orderBy:'price':true | limitTo:1">Highest Bid: £ {{ bid.price }}</h5>
-</div>
+  <h2 ng-if="users.user.id === main.user.id && main.user.role === 'Artist'">My Work</h2>
+  <div ng-repeat="piece in users.user.pieces">
+    <img src="{{ piece.image}}", width=150>
+    <h4 ui-sref="piecesShow({ id: piece.id })">{{ piece.title }}</h4>
+    <h5 ng-repeat="bid in piece.bids | orderBy:'price':true | limitTo:1">Highest Bid: £ {{ bid.price }}</h5>
+  </div>
 
 
-<div ng-if="users.user.id === main.user.id && main.user.role !== 'Artist'">
-<h2>My Bids</h2>
-<div ng-if="bid.work.status === 'open'" ng-repeat="bid in users.highBids">
-  <h4>Work I have the highest Bid on</h4>
-  <h5 ui-sref="piecesShow({ id: bid.work.id })">{{ bid.work.title }}, £ {{ bid.price }} </h5>
-  <img src="{{ bid.work.image }}", width=150 />
-</div>
+  <div ng-if="users.user.id === main.user.id && main.user.role !== 'Artist'">
+  <h2>My Bids</h2>
+  <div ng-if="bid.work.status === 'open'" ng-repeat="bid in users.highBids">
+    <h4>Work I have the highest Bid on</h4>
+    <h5 ui-sref="piecesShow({ id: bid.work.id })">{{ bid.work.title }}, £ {{ bid.price }} </h5>
+    <img src="{{ bid.work.image }}", width=150 />
+  </div>
 
-<div ng-repeat="bid in users.lowBids">
-  <h4>Work I have been outbid on</h4>
-  <h5 ui-sref="piecesShow({ id: bid.piece.id })">{{ bid.work.title }}, £ {{ bid.price }}</h5>
-  <img src="{{ bid.work.image }}", width=150 />
-</div>
+  <div ng-repeat="bid in users.lowBids">
+    <h4>Work I have been outbid on</h4>
+    <h5 ui-sref="piecesShow({ id: bid.piece.id })">{{ bid.work.title }}, £ {{ bid.price }}</h5>
+    <img src="{{ bid.work.image }}", width=150 />
+  </div>
 
-<div ng-if="bid.work.status === 'closed'" ng-repeat="bid in users.highBids">
-  <h4>Work I have previously bought</h4>
-  <h5>{{ bid.work.title }}, £ {{ bid.price }}</h5>
-  <img src="{{ bid.work.image }}", width=150 />
-</div>
+  <div ng-if="bid.work.status === 'closed'" ng-repeat="bid in users.highBids">
+    <h4>Work I have previously bought</h4>
+    <h5>{{ bid.work.title }}, £ {{ bid.price }}</h5>
+    <img src="{{ bid.work.image }}", width=150 />
+  </div>
+
+  </div>
 
 </div>

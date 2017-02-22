@@ -43,28 +43,31 @@
   </div>
 </div> -->
 
-<h2>Add a New Piece of Work</h2>
-<br>
-<form ng-submit="pieces.create()">
-  <div class="form-group">
-    <label for="medium">Medium</label>
-    <input type="text" class="form-control validate" id="medium" placeholder="Medium" ng-model="pieces.piece.piece.name">
-  </div>
-  <div class="form-group">
-    <label for="title1">Title</label>
-    <input type="text" class="form-control" id="title1" placeholder="Title" ng-model="pieces.piece.piece.title">
-  </div>
-  <div class="form-group">
-    <label for="description1">Description</label>
-    <input type="text" class="form-control" id="description2" placeholder="Description" ng-model="pieces.piece.piece.description">
-  </div>
-  <div class="form-group">
-    <label for="password1">Image</label>
-    <input type="text" class="form-control" id="image1" placeholder="Image URL" ng-model="pieces.piece.piece.image">
-  </div>
-  <div class="form-group">
-    <label for="password1">Minimum Bid (£)</label>
-    <input type="integer" class="form-control" id="minimum_bid1" placeholder="Minimum Bid" ng-model="pieces.piece.piece.minimum_bid">
-  </div>
-  <button type="submit" class="btn btn-primary">Create New Piece</button>
-</form>
+<div class="container">
+  <h2>Add a New Piece of Work</h2>
+  <br>
+  <form ng-submit="pieces.create()">
+    <div class="form-group">
+      <label for="medium">Medium</label>
+      <input type="text" class="form-control validate" id="medium" placeholder="Medium" ng-model="pieces.piece.piece.name">
+    </div>
+    <div class="form-group">
+      <label for="title1">Title</label>
+      <input type="text" class="form-control" id="title1" placeholder="Title" ng-model="pieces.piece.piece.title">
+    </div>
+    <div class="form-group">
+      <label for="description1">Description</label>
+      <input type="text" class="form-control" id="description2" placeholder="Description" ng-model="pieces.piece.piece.description">
+    </div>
+    <div class="form-group">
+      <label for="password1">Image</label>
+      <input type="text" class="form-control" id="image1" placeholder="Image URL" ng-model="pieces.piece.piece.image">
+    </div>
+    <div class="form-group">
+      <label for="password1">Minimum Bid (£)</label>
+      <input type="integer" class="form-control" id="minimum_bid1" placeholder="Minimum Bid" ng-model="pieces.piece.piece.minimum_bid">
+    </div>
+    <button type="submit" class="btn btn-primary">Create New Piece</button>
+  </form>
+
+</div>
