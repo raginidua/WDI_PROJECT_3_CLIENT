@@ -24,6 +24,11 @@ function pieceRouter($locationProvider, $stateProvider, $urlRouterProvider) {
       url: '/pieces/:id',
       templateUrl: '/js/views/pieces/show.html',
       controller: 'PiecesShowCtrl as pieces'
+    })
+    .state('piecesEdit', {
+      url: '/pieces/:id/edit',
+      templateUrl: '/js/views/pieces/edit.html',
+      controller: 'PiecesEditCtrl as pieces'
     });
 
   //if none of the above names found then redirect to '/'

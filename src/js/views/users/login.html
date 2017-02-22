@@ -1,3 +1,5 @@
+<!-- <div class="login">
+<h2>LOGIN FORM</h2>
 <div class="row top">
   <form class="col s12 m8 offset-m2">
     <div class="row">
@@ -17,3 +19,18 @@
     </div>
   </form>
 </div>
+</div> -->
+
+<h2>Login Form</h2>
+<br>
+<form>
+  <div class="form-group">
+    <label for="email1">Email address</label>
+    <input type="email" class="form-control validate" id="email1" aria-describedby="emailHelp" placeholder="Enter email" ng-model="usersLogin.user.user.email">
+  </div>
+  <div class="form-group">
+    <label for="password1">Password</label>
+    <input type="password" class="form-control" id="password1" placeholder="Password" ng-model="usersLogin.user.user.password">
+  </div>
+  <button type="submit" class="btn btn-primary" ng-click="usersLogin.usersLogin()">Login</button>
+</form>

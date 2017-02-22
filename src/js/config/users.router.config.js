@@ -39,6 +39,11 @@ function userRouter($locationProvider, $stateProvider, $urlRouterProvider) {
       url: '/users/:id',
       templateUrl: '/js/views/users/show.html',
       controller: 'UsersShowCtrl as users'
+    })
+    .state('usersEdit', {
+      url: '/users/:id/edit',
+      templateUrl: '/js/views/users/edit.html',
+      controller: 'UsersEditCtrl as users'
     });
 
   //if none of the above names found then redirect to '/'
