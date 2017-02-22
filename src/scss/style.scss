@@ -37,22 +37,91 @@ body {
     }
   }
 
-
-  .intro {
-    position: relative;
-    font-family: 'Mada', sans-serif;
-    padding: 0;
-    // top: 50%;
-    // bottom: 50%;
-    height: 100px;
-    width: 550px;
-    background-color: #BEE7B8;
-    margin: 100px auto;
-    h1 {
-      font-size: 100px;
-      text-align: center;
+  .homePage {
+    height: 300vh;
+    .introPage {
+      position: relative;
+      font-family: 'Mada', sans-serif;
+      padding: 0;
+      // top: 50%;
+      // bottom: 50%;
+      height: 100vh;
+      width: 100%;
+      background-color: #BEE7B8;
+      margin: 0;
+      padding: 0;
+      h1 {
+        font-size: 100px;
+        text-align: center;
+      }
+      h6 {
+        margin-top: 40vh;
+        text-align: center;
+      }
+    }
+    .secondPage {
+      height: 100vh;
+      width: 100%;
+      background-color: #9448BC;
+      margin: 0;
+      padding: 0;
+      .column1 {
+        background-color: red;
+        display: inline-block;
+        height: 100vh;
+        width: 20%;
+        margin: 0;
+        padding: 0;
+      }
+      .column2 {
+        background-color: green;
+        display: inline-block;
+        height: 100vh;
+        width: 20%;
+        padding: 0;
+        margin: 0;
+      }
+      .column3 {
+        background-color: blue;
+        display: inline-block;
+        height: 100vh;
+        width: 20%;
+        padding: 0;
+        margin: 0;
+      }
+      .column4 {
+        background-color: white;
+        display: inline-block;
+        height: 100vh;
+        width: 20%;
+        padding: 0;
+        margin: 0;
+      }
+      .column5 {
+        background-color: pink;
+        display: inline-block;
+        height: 100vh;
+        width: 20%;
+        padding: 0;
+        margin: 0;
+      }
+    }
+    .thirdPage {
+      height: 100vh;
+      width: 100%;
+      background-color: #90FCF9;
+      margin: 0;
+      padding: 0;
     }
   }
+
+  
+
+
+
+
+
+
 
   .login {
     background-color: red;
