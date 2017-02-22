@@ -2,7 +2,7 @@
 <ul class="list-unstyled">
   <li ng-repeat="user in users.users" ng-show="user.role == 'Artist'">
     <!-- <h3>{{ user.id }}</h3> -->
-    <h3 ui-sref="usersShow({ id: user.id })">{{ user.first_name }} {{user.last_name}}</h3>
+    <h4 ui-sref="usersShow({ id: user.id })">{{ user.first_name }} {{user.last_name}}</h3>
     <!-- <h4>{{ user.pieces }}</h4> -->
   </li>
 </ul>

@@ -22,6 +22,16 @@ function PiecesShowCtrl(API, $http, $stateParams, $resource) {
         return b.price - a.price;
       });
       vm.bidMinimum = vm.piece.bids[0].price + 1;
+      const currentTime = (Date.now());
+      const closingTime = vm.piece.closing_time;
+      vm.closingTimeInSeconds = new Date(closingTime).getTime();
+      const RemainingTime = closingTimeInSeconds- currentTime;
+      const RemainingTimeInMinutes = RemainingTime / 60000;
+      const HoursRemaining = RemainingTimeInMinutes / 60;
+      vm.DaysRemaining = Math.floor(HoursRemaining/24);
+      vm.HoursRemaining = Math.floor(HoursRemaining - (vm.DaysRemaining*24));
+      vm.MinutesRemaining = Math.round(RemainingTimeInMinutes - (vm.DaysRemaining*24*60) - (vm.HoursRemaining*60));
+      console.log(vm.DaysRemaining, 'Days remaining', vm.HoursRemaining, 'Hours Remaining', vm.MinutesRemaining, 'Minutes Remaining');
     });
 
   vm.placeBid = function(){
