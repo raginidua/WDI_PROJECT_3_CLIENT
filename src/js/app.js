@@ -3,5 +3,6 @@ angular
   .module('artApp', [
     'ui.router',
     'ngResource',
-    'angular-jwt'
+    'angular-jwt',
+    'timer'
   ]);
