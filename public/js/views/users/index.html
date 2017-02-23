@@ -1,10 +1,15 @@
+
 <div class="container">
-  <h1>Artist List</h1>
-  <ul class="list-unstyled">
-    <li ng-repeat="user in users.users" ng-show="user.role == 'Artist'">
-      <!-- <h3>{{ user.id }}</h3> -->
-      <h4 ui-sref="usersShow({ id: user.id })">{{ user.first_name }} {{user.last_name}}</h3>
-      <!-- <h4>{{ user.pieces }}</h4> -->
-    </li>
-  </ul>
+  <h1 class="artistsTitle">ARTISTS</h1>
+  <br>
+  <div class="artistList">
+    <ul class="list-unstyled">
+      <li ng-repeat="user in users.users" ng-show="user.role == 'Artist'">
+        <!-- <h3>{{ user.id }}</h3> -->
+        <h4 ui-sref="usersShow({ id: user.id })">{{ user.first_name }} {{user.last_name}}</h3>
+        <!-- <h4>{{ user.pieces }}</h4> -->
+      </li>
+    </ul>
+  </div>
+  <div class="artistImage"></div>
 </div>

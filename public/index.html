@@ -13,40 +13,6 @@
   <!-- endinject -->
 </head>
 <body ng-controller="MainCtrl as main">
-  <!-- <ul class="nav navbar-nav navbar-right">
-    <li ng-show="main.user">
-      <p class="navbar-text">Welcome, {{ main.user.first_name }}</p>
-    </li>
-    <li>
-      <a ui-sref="home">Home</a>
-    </li>
-    <li>
-      <a ui-sref="about">About</a>
-    </li>
-    <li ng-hide="main.user">
-      <a ui-sref="usersRegister">Register</a>
-    </li>
-    <li ng-hide="main.user">
-      <a ui-sref="usersLogin">Login</a>
-    </li>
-    <li ng-show="main.user">
-      <a ui-sref="usersShow({ id: main.user.id })">My Profile</a>
-    </li>
-    <li ng-show="main.user">
-      <a ui-sref="usersIndex">Users</a>
-    </li>
-    <li ng-show="main.user">
-      <a ui-sref="piecesIndex">Pieces</a>
-    </li>
-    <li ng-show="main.user">
-      <a ui-sref="piecesNew">Add New Piece</a>
-    </li>
-    <li ng-show="main.user">
-      <a ng-click="main.logout()">Logout</a>
-    </li>
-  </ul> -->
-
-
   <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -61,35 +27,38 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav" ng-show="main.user">
+      <!-- <ul class="nav navbar-nav" ng-show="main.user">
         <li><a ui-sref="home">Welcome, {{ main.user.first_name }}</a></li>
+      </ul> -->
+      <ul class="nav navbar-nav">
+        <li><a ui-sref="home">HOME</a></li>
       </ul>
       <ul class="nav navbar-nav">
-        <li><a ui-sref="home">Home</a></li>
-      </ul>
-      <ul class="nav navbar-nav">
-        <li><a ui-sref="about">About</a></li>
+        <li><a ui-sref="about">ABOUT</a></li>
       </ul>
       <ul class="nav navbar-nav" ng-show="main.user">
-        <li><a ui-sref="usersShow({ id: main.user.id })">My Profile</a></li>
+        <li><a ui-sref="usersShow({ id: main.user.id })">MY PROFILE</a></li>
       </ul>
       <ul class="nav navbar-nav" ng-show="main.user">
-        <li><a ui-sref="usersIndex">Artists</a></li>
+        <li><a ui-sref="usersIndex">ARTISTS</a></li>
       </ul>
       <ul class="nav navbar-nav" ng-show="main.user">
-        <li><a ui-sref="piecesIndex">Works</a></li>
+        <li><a ui-sref="piecesIndex">PIECES</a></li>
       </ul>
       <ul class="nav navbar-nav" ng-show="main.user.role === 'Artist'">
-        <li><a ui-sref="piecesNew">Add a new piece</a></li>
+        <li><a ui-sref="piecesNew">ADD A NEW PIECE</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right" ng-hide="main.user">
-        <li><a ui-sref="usersRegister">Register</a></li>
+      <ul class="nav navbar-nav" ng-hide="main.user">
+        <li><a ui-sref="usersRegister">REGISTER</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right" ng-hide="main.user">
-        <li><a ui-sref="usersLogin">Login</a></li>
+      <ul class="nav navbar-nav" ng-hide="main.user">
+        <li><a ui-sref="usersLogin">LOGIN</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right" ng-show="main.user">
-        <li><a ng-click="main.logout()">Logout</a></li>
+      <ul class="nav navbar-nav" ng-show="main.user">
+        <li><a ng-click="main.logout()">LOGOUT</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right icon" ng-show="main.user">
+        <li><a href="#" class="dropdown-submenu pull-left">STARTIST</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
