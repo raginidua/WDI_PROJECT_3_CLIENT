@@ -1,116 +1,54 @@
-<!-- <div class="row top">
-  <div class="col s12 m8 offset-m2">
-    <form class="col s12" ng-submit="usersRegister.usersRegister()">
+<div class="registerPage">
+  <div class="container">
+    <div class="registerForm">
+    <h2>Register Form</h2>
+    <br>
+    <form ng-submit="usersRegister.usersRegister()">
       <fieldset class="form-group">
         <legend>I am...</legend>
         <div class="form-check">
           <label class="form-check-label role">
-            <input type="radio" class="form-check-input validate" name="optionsRadios" id="role" value="Artist" ng-model="usersRegister.user.user.role">
+            <input type="radio" class="form-check-input validate" name="optionsRadios" id="role2" value="Artist" ng-model="usersRegister.user.user.role">
             An Artist
           </label>
         </div>
         <div class="form-check">
           <label class="form-check-label role">
-            <input type="radio" class="form-check-input validate" name="optionsRadios" id="role1" value="Customer" ng-model="usersRegister.user.user.role">
+            <input type="radio" class="form-check-input validate" name="optionsRadios" id="role3" value="Customer" ng-model="usersRegister.user.user.role">
             A Customer
           </label>
         </div>
       </fieldset>
-      <div class="row">
-        <div class="row">
-          <div class="input-field col s12 m6">
-            <input id="first_name" type="text" class="validate" ng-model="usersRegister.user.user.first_name">
-            <label for="first_name">First Name</label>
-          </div>
-          <div class="input-field col s12 m6">
-            <input id="last_name" type="text" class="validate" ng-model="usersRegister.user.user.last_name">
-            <label for="last_name">Last Name</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12 m6">
-            <input id="username" type="text" class="validate" ng-model="usersRegister.user.user.username">
-            <label for="username">Username</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="email" type="email" class="validate" ng-model="usersRegister.user.user.email">
-            <label for="email">Email</label>
-          </div>
-        </div>
-        <div class="row" ng-if="usersRegister.user.user.role === 'Artist'">
-          <div class="input-field col s12">
-            <input id="art_school" type="text" class="validate" ng-model="usersRegister.user.user.art_school">
-            <label for="art_school">Art School</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12 m6">
-            <input id="password" type="password" class="validate" ng-model="usersRegister.user.user.password">
-            <label for="password">Password</label>
-          </div>
-          <div class="input-field col s12 m6">
-            <input id="password_confirmation" type="password" class="validate" ng-model="usersRegister.user.user.passwordConfirmation">
-            <label for="password_confirmation">Password Confirmation</label>
-          </div>
-        </div>
-        <div class="row">
-          <input type="submit" class="waves-effect waves-light btn col s12" value="Register">
-        </div>
+      <div class="form-group">
+        <label for="first_name">First Name</label>
+        <input type="text" class="form-control validate" id="first_name1" placeholder="First Name" ng-model="usersRegister.user.user.first_name">
       </div>
+      <div class="form-group">
+        <label for="last_name">Last Name</label>
+        <input type="text" class="form-control validate" id="last_name1" placeholder="Last Name" ng-model="usersRegister.user.user.last_name">
+      </div>
+      <div class="form-group">
+        <label for="last_name">Username</label>
+        <input type="text" class="form-control validate" id="username1" placeholder="Username" ng-model="usersRegister.user.user.username">
+      </div>
+      <div class="form-group">
+        <label for="last_name">Email Address</label>
+        <input type="email" class="form-control validate" id="email1" placeholder="Email" ng-model="usersRegister.user.user.email">
+      </div>
+      <div class="form-group" ng-if="usersRegister.user.user.role === 'Artist'">
+        <label for="art_school">Art School</label>
+        <input type="text" class="form-control validate" id="art_school1" placeholder="Art School" ng-model="usersRegister.user.user.art_school">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control validate" id="password1" placeholder="Password" ng-model="usersRegister.user.user.password">
+      </div>
+      <div class="form-group">
+        <label for="password_confirmation">Password Confirmation</label>
+        <input type="password" class="form-control validate" id="password_confirmation1" placeholder="Password Confirmation" ng-model="usersRegister.user.user.password_confirmation">
+      </div>
+      <button type="submit" class="btn btn-primary" value="Register" ng-click="usersRegister.usersRegister()">Register</button>
     </form>
   </div>
-</div> -->
-
-<div class="container">
-  <h2>Register Form</h2>
-  <br>
-  <form ng-submit="usersRegister.usersRegister()">
-    <fieldset class="form-group">
-      <legend>I am...</legend>
-      <div class="form-check">
-        <label class="form-check-label role">
-          <input type="radio" class="form-check-input validate" name="optionsRadios" id="role2" value="Artist" ng-model="usersRegister.user.user.role">
-          An Artist
-        </label>
-      </div>
-      <div class="form-check">
-        <label class="form-check-label role">
-          <input type="radio" class="form-check-input validate" name="optionsRadios" id="role3" value="Customer" ng-model="usersRegister.user.user.role">
-          A Customer
-        </label>
-      </div>
-    </fieldset>
-    <div class="form-group">
-      <label for="first_name">First Name</label>
-      <input type="text" class="form-control validate" id="first_name1" placeholder="First Name" ng-model="usersRegister.user.user.first_name">
-    </div>
-    <div class="form-group">
-      <label for="last_name">Last Name</label>
-      <input type="text" class="form-control validate" id="last_name1" placeholder="Last Name" ng-model="usersRegister.user.user.last_name">
-    </div>
-    <div class="form-group">
-      <label for="last_name">Username</label>
-      <input type="text" class="form-control validate" id="username1" placeholder="Username" ng-model="usersRegister.user.user.username">
-    </div>
-    <div class="form-group">
-      <label for="last_name">Email Address</label>
-      <input type="email" class="form-control validate" id="email1" placeholder="Email" ng-model="usersRegister.user.user.email">
-    </div>
-    <div class="form-group" ng-if="usersRegister.user.user.role === 'Artist'">
-      <label for="art_school">Art School</label>
-      <input type="text" class="form-control validate" id="art_school1" placeholder="Art School" ng-model="usersRegister.user.user.art_school">
-    </div>
-    <div class="form-group">
-      <label for="password">Password</label>
-      <input type="password" class="form-control validate" id="password1" placeholder="Password" ng-model="usersRegister.user.user.password">
-    </div>
-    <div class="form-group">
-      <label for="password_confirmation">Password Confirmation</label>
-      <input type="password" class="form-control validate" id="password_confirmation1" placeholder="Password Confirmation" ng-model="usersRegister.user.user.password_confirmation">
-    </div>
-    <button type="submit" class="btn btn-primary" value="Register" ng-click="usersRegister.usersRegister()">Register</button>
-  </form>
-
+</div>
 </div>

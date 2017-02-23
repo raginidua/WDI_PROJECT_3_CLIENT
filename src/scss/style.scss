@@ -1,6 +1,7 @@
 // Import all of your scss files here
 body {
   background: #3949ab;
+  font-family: 'Montserrat', sans-serif;
 }
 
 // nav.tabs {
@@ -37,7 +38,7 @@ body {
     border-radius: 0;
     .container-fluid {
       .collapse {
-        font-family: 'Mada', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         font-size: 18px;
         ul {
           color: #3949ab;
@@ -48,92 +49,230 @@ body {
 
   .homePage {
     height: 300vh;
+    width: 100%;
     margin: 0;
+    position: absolute;
     .introPage {
       position: relative;
-      font-family: 'Mada', sans-serif;
       padding: 0;
       // top: 50%;
       // bottom: 50%;
       height: 100vh;
       width: 100%;
       background-color: #3949ab;
-      margin: 0;
       padding: 0;
       h1 {
         font-size: 100px;
         text-align: center;
         color: white;
         padding-top: 60px;
+        font-family: 'Mada', sans-serif;
       }
-      h6 {
+      .clickToFind {
         margin-top: 30vh;
         text-align: center;
         color: white;
       }
     }
-    .secondPage {
-      height: 100vh;
-      width: 100%;
-      background-color: #9448BC;
-      margin: 0;
-      padding: 0;
       .column1 {
-        background-color: red;
-        display: inline-block;
+        background-color: #3D5AFE;
+        // display: inline-block;
+        position: relative;
         height: 100vh;
         width: 20%;
         margin: 0;
         padding: 0;
+        // transition-property: background-color, margin-top;
+        // transition-duration: 2s;
+        // transition-timing-function: linear, ease;
+        transition: transform 2s;
+        transition-delay: 0s;
+        // animation: move 3s ease;
       }
       .column2 {
-        background-color: green;
-        display: inline-block;
+        background-color: #3D5AFE;
+        position: relative;
+        // display: inline-block;
         height: 100vh;
         width: 20%;
         padding: 0;
-        margin: 0;
+        margin-top: -100vh;
+        left: 20%;
+        transition: transform 2s;
+        transition-delay: 1s;
       }
       .column3 {
-        background-color: blue;
-        display: inline-block;
+        background-color: #3D5AFE;
+        position: relative;
+        // display: inline-block;
         height: 100vh;
         width: 20%;
         padding: 0;
         margin: 0;
+        margin-top: -100vh;
+        left: 40%;
+        transition: transform 2s;
+        transition-delay: 0.5s;
       }
       .column4 {
-        background-color: white;
-        display: inline-block;
+        background-color: #3D5AFE;
+        position: relative;
+        // display: inline-block;
         height: 100vh;
         width: 20%;
         padding: 0;
         margin: 0;
+        margin-top: -100vh;
+        left: 60%;
+        transition: transform 2s;
+        transition-delay: 2s;
       }
       .column5 {
-        background-color: pink;
-        display: inline-block;
+        background-color: #3D5AFE;
+        position: relative;
+        // display: inline-block;
+        height: 100vh;
+        width: 20%;
+        padding: 0;
+        margin: 100;
+        margin-top: -100vh;
+        left: 80%;
+        transition: transform 2s;
+        transition-delay: 1.5s;
+      }
+      .customerMsg {
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        transition: transform 2s;
+        transition-delay: 4.5s;
+        font-size: 30px;
+        // transition-property: color;
+        // transition-duration: 10s;
+        // transition-timing-function: linear, ease;
+      }
+      .artistMsg {
+        font-family: 'Mada', sans-serif;
+        font-size: 100px;
+      }
+      .column1Again {
+        background-color: #8C9EFF;
+        // display: inline-block;
+        position: relative;
+        height: 100vh;
+        width: 20%;
+        margin: 0;
+        padding: 0;
+        // transition-property: background-color, margin-top;
+        // transition-duration: 2s;
+        // transition-timing-function: linear, ease;
+        transition: transform 2s;
+        transition-delay: 6s;
+        // animation: move 3s ease;
+      }
+      .column2Again {
+        background-color: #8C9EFF;
+        position: relative;
+        // display: inline-block;
+        height: 100vh;
+        width: 20%;
+        padding: 0;
+        margin-top: -100vh;
+        left: 20%;
+        transition: transform 2s;
+        transition-delay: 7s;
+      }
+      .column3Again {
+        background-color: #8C9EFF;
+        position: relative;
+        // display: inline-block;
         height: 100vh;
         width: 20%;
         padding: 0;
         margin: 0;
+        margin-top: -100vh;
+        left: 40%;
+        transition: transform 2s;
+        transition-delay: 6.5s;
       }
-    }
-    .thirdPage {
-      height: 100vh;
-      width: 100%;
-      background-color: #90FCF9;
-      margin: 0;
-      padding: 0;
-    }
+      .column4Again {
+        background-color: #8C9EFF;
+        position: relative;
+        // display: inline-block;
+        height: 100vh;
+        width: 20%;
+        padding: 0;
+        margin: 0;
+        margin-top: -100vh;
+        left: 60%;
+        transition: transform 2s;
+        transition-delay: 8s;
+      }
+      .column5Again {
+        background-color: #8C9EFF;
+        position: relative;
+        // display: inline-block;
+        height: 100vh;
+        width: 20%;
+        padding: 0;
+        margin: 100;
+        margin-top: -100vh;
+        left: 80%;
+        transition: transform 2s;
+        transition-delay: 7.5s;
+      }
+      .studentMsg {
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        transition: transform 2s;
+        transition-delay: 9s;
+        font-size: 30px;
+        // transition-property: color;
+        // transition-duration: 10s;
+        // transition-timing-function: linear, ease;
+      }
+    // }
   }
 
-
-
-
-
-
-
+    .homePage:hover {
+        .column1 {
+          transform: translate(0px, -100vh);
+        }
+        .column2 {
+          transform: translate(0px, -100vh);
+        }
+        .column3 {
+          transform: translate(0px, -100vh);
+        }
+        .column4 {
+          transform: translate(0px, -100vh);
+        }
+        .column5 {
+          transform: translate(0px, -100vh);
+        }
+        .customerMsg {
+          transform: translate(0px, -180vh);
+          // color: #009688;
+        }
+        .column1Again {
+          transform: translate(0px, -235vh);
+        }
+        .column2Again {
+          transform: translate(0px, -235vh);
+        }
+        .column3Again {
+          transform: translate(0px, -235vh);
+        }
+        .column4Again {
+          transform: translate(0px, -235vh);
+        }
+        .column5Again {
+          transform: translate(0px, -235vh);
+        }
+        .studentMsg {
+          transform: translate(0px, -310vh);
+          // color: #009688;
+        }
+    }
 
 
   .login {
@@ -145,6 +284,64 @@ body {
   background-color: #7D80DA;
   height: 100vh;
   width: 100%;
+}
+
+.loginForm {
+  padding: 10px;
+  margin-top: 60px;
+  border-radius: 20px;
+  height: 270px;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 4px solid white;
+  h2 {
+    margin: 0;
+    color: white;
+  }
+  form {
+    color: white;
+    input {
+      background-color: #7D80DA;
+      border: 2px solid white;
+    }
+    button {
+      background-color: #7D80DA;
+      border: 2px solid white;
+    }
+  }
+}
+
+.registerForm {
+  padding: 10px;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  height: 700px;
+  width: 600px;
+  border: 4px solid white;
+  color: white;
+  h2 {
+    margin: 0;
+    color: white;
+  }
+  form {
+    color: white;
+    fieldset {
+      legend {
+        color: white;
+      }
+    }
+    input {
+      background-color: #3949ab;
+      border: 2px solid white;
+    }
+    button {
+      background-color: #3949ab;
+      border: 2px solid white;
+    }
+  }
 }
 
 

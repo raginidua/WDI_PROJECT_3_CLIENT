@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>Art App</title>
   <base href="/">
-  <link href="https://fonts.googleapis.com/css?family=Mada" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Mada|Montserrat|Raleway" rel="stylesheet">
   <!-- inject:js -->
   <script src="js/app.js"></script>
   <!-- endinject -->
@@ -65,28 +65,28 @@
         <li><a ui-sref="home">Welcome, {{ main.user.first_name }}</a></li>
       </ul>
       <ul class="nav navbar-nav">
-        <li><a ui-sref="home">HOME</a></li>
+        <li><a ui-sref="home">Home</a></li>
       </ul>
       <ul class="nav navbar-nav">
-        <li><a ui-sref="about">ABOUT</a></li>
+        <li><a ui-sref="about">About</a></li>
       </ul>
       <ul class="nav navbar-nav" ng-show="main.user">
-        <li><a ui-sref="usersShow({ id: main.user.id })">MY PROFILE</a></li>
+        <li><a ui-sref="usersShow({ id: main.user.id })">My Profile</a></li>
       </ul>
       <ul class="nav navbar-nav" ng-show="main.user">
-        <li><a ui-sref="usersIndex">ARTISTS</a></li>
+        <li><a ui-sref="usersIndex">Artists</a></li>
       </ul>
       <ul class="nav navbar-nav" ng-show="main.user">
-        <li><a ui-sref="piecesIndex">WORKS</a></li>
+        <li><a ui-sref="piecesIndex">Works</a></li>
       </ul>
       <ul class="nav navbar-nav" ng-show="main.user.role === 'Artist'">
-        <li><a ui-sref="piecesNew">ADD A NEW WORK</a></li>
+        <li><a ui-sref="piecesNew">Add a new piece</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right" ng-hide="main.user">
-        <li><a ui-sref="usersRegister">REGISTER</a></li>
+        <li><a ui-sref="usersRegister">Register</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right" ng-hide="main.user">
-        <li><a ui-sref="usersLogin">LOGIN</a></li>
+        <li><a ui-sref="usersLogin">Login</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right" ng-show="main.user">
         <li><a ng-click="main.logout()">Logout</a></li>
