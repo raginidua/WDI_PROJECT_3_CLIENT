@@ -10,6 +10,11 @@ function UsersIndexCtrl(API, $http, $resource) {
     { id: '@_id' }
   );
 
+  vm.updateImage = (user) => {
+    console.log(user.pieces[0].image);
+    document.getElementById('artistImage').style.backgroundImage = 'url(' + user.pieces[0].image + ')';
+  };
+
   usersIndex();
 
   // const Artist = 'Artist';

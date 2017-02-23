@@ -1,29 +1,30 @@
 <div class="container">
-  <h2>{{ pieces.piece.title }}</h2>
-  <h4>{{ pieces.piece.user.first_name }} {{ pieces.piece.user.last_name }}</h4>
-  <h5>{{ pieces.piece.description }}</h5>
-  <image src="{{ pieces.piece.image }}", width=300>
-
-  <!-- <h5>{{ pieces.DaysRemaining }} Days {{ pieces.HoursRemaining}} Hours and {{ pieces.MinutesRemaining }} Minutes Remaining</h5> -->
-
-  <div>
-    <timer end-time="pieces.closingTimeInSeconds" interval="1000">{{days}} days, {{hours}} hours, {{minutes}} minutes, {{seconds}} seconds.</timer>
+  <div class="piecesShowLeft">
+    <h2>{{ pieces.piece.title }}</h2>
+    <h4>{{ pieces.piece.user.first_name }} {{ pieces.piece.user.last_name }}</h4>
+    <h5>{{ pieces.piece.description }}</h5>
+    <image src="{{ pieces.piece.image }}", width=400>
   </div>
 
+  <div class="piecesShowRight">
 
-  <br>
-  <h4 ng-if="pieces.piece.bids.length !== 0">Bids</h4>
-  <h5 ng-if="pieces.piece.bids.length !== 0" ng-repeat="bid in pieces.piece.bids">£ {{ bid.price }}, {{ bid.bidder.first_name }} {{ bid.bidder.last_name }}</h5>
-  <h2 ng-if="pieces.piece.bids.length !== 0" ui-sref="usersShow({ id: pieces.piece.user.id })">{{ pieces.piece.user.first_name }} {{ pieces.piece.user.last_name }}</h2>
+    <div>
+      <timer end-time="pieces.closingTimeInSeconds" interval="1000">{{days}} days, {{hours}} hours, {{minutes}} minutes, {{seconds}} seconds.</timer>
+    </div>
+    <h4 ng-if="pieces.piece.bids.length !== 0">Bids</h4>
+    <h5 ng-if="pieces.piece.bids.length !== 0" ng-repeat="bid in pieces.piece.bids">£ {{ bid.price }}, {{ bid.bidder.first_name }} {{ bid.bidder.last_name }}</h5>
+    <h2 ng-if="pieces.piece.bids.length !== 0" ui-sref="usersShow({ id: pieces.piece.user.id })">{{ pieces.piece.user.first_name }} {{ pieces.piece.user.last_name }}</h2>
 
 
 
-  <div ng-if="main.user.role !== 'Artist'">
-    <h3>Place bid here</h3>
-    <form ng-submit="pieces.placeBid()">
-      £<input type="number" ng-model="pieces.bid.price" min="{{pieces.bidMinimum}}">
-      <input type="submit" name="" value="">
-    </form>
+    <div ng-if="main.user.role !== 'Artist'">
+      <h3>Place bid here</h3>
+      <form ng-submit="pieces.placeBid()">
+        £<input type="number" ng-model="pieces.bid.price" min="{{pieces.bidMinimum}}">
+        <input type="submit" name="" value="">
+      </form>
+    </div>
+
   </div>
 
 </div>

@@ -1,5 +1,14 @@
 <div class="container">
-  <h1>Works of Art List</h1>
+  <h1 class="artistsTitle">PIECES</h1>
+  <div class="row ng-repeat="piece in pieces.pieces"">
+  <div class="col-md-4"><h3 ui-sref="piecesShow({ id: piece.id })">{{ piece.title }}</h3>
+  <h4>{{ piece.description }}</h4>
+  <image src="{{ piece.image }}", width=150>
+  <h4 ui-sref="usersShow({ id: piece.user.id })">{{ piece.user.first_name }} {{ piece.user.last_name }}</h4></div>
+  <div class="col-md-4">.col-md-1</div>
+  <div class="col-md-4">.col-md-1</div>
+</div>
+
   <ul class="list-unstyled">
     <li ng-repeat="piece in pieces.pieces">
       <h3 ui-sref="piecesShow({ id: piece.id })">{{ piece.title }}</h3>

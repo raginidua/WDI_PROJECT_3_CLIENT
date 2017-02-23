@@ -1,15 +1,30 @@
 <div class="container">
-  <h1 ng-if="main.user.id === users.user.id">My profile</h1>
-  <h1 ng-if="main.user.id !== users.user.id">{{ users.user.first_name }} {{ users.user.last_name }}</h1>
-  <p  ng-if="main.user.id === users.user.id" sui-sref="usersEdit({ id: main.user.id })">Edit My Profile</p>
+  <h1 ng-if="main.user.id === users.user.id" class="artistsTitle">MY PROFILE</h1>
+  <h1 ng-if="main.user.id !== users.user.id" class="artistsTitle">{{ users.user.first_name }} {{ users.user.last_name }}</h1>
+  <p  ng-if="main.user.id === users.user.id" sui-sref="usersEdit({ id: main.user.id })">EDIT MY PROFILE</p>
   <h4>{{ users.user.art_school }}</h4>
   <br>
+
 
   <h2 ng-if="users.user.id === main.user.id && main.user.role === 'Artist'">My Work</h2>
   <div ng-repeat="piece in users.user.pieces">
     <img src="{{ piece.image}}", width=150>
     <h4 ui-sref="piecesShow({ id: piece.id })">{{ piece.title }}</h4>
     <h5 ng-repeat="bid in piece.bids | orderBy:'price':true | limitTo:1">Highest Bid: £ {{ bid.price }}</h5>
+  </div>
+
+
+  <div class="row" ng-if="users.user.id === main.user.id && main.user.role !== 'Artist'">
+    <div class="col-md-8 pageTitle myBids">MY BIDS</div>
+    <div class="col-md-4 pageTitle previouslyBought">PREVIOUSLY BOUGHT WORKS</div>
+  </div>
+  <div class="row" ng-if="users.user.id === main.user.id && main.user.role !== 'Artist'">
+    <div class="col-md-4">HIGHEST BID</div>
+    <div class="col-md-4">OUTBID</div>
+    <div class="col-md-4"></div>
+  </div>
+  <div class="row" ng-repeat="bid in users.highBids" ng-if="users.user.id === main.user.id && main.user.role !== 'Artist'">
+    <div class="col-md-4" ng-if="bid.work.status === 'open'" ><h5 ui-sref="piecesShow({ id: bid.work.id })">{{ bid.work.title }}, £ {{ bid.price }}</h5><img src="{{ bid.work.image }}", width=150 /></div>
   </div>
 
 
