@@ -1,14 +1,29 @@
 <div class="container">
   <h1 ng-if="main.user.id === users.user.id" class="artistsTitle">MY PROFILE</h1>
-  <h1 ng-if="main.user.id !== users.user.id" class="artistsTitle">{{ users.user.first_name }} {{ users.user.last_name }}</h1>
+  <h1 ng-if="main.user.id !== users.user.id" class="artistsTitle2">{{ users.user.first_name }} {{ users.user.last_name }}</h1>
   <p ng-if="main.user.id === users.user.id" ui-sref="usersEdit({ id: main.user.id })">EDIT MY PROFILE</p>
   <h4>{{ users.user.art_school }}</h4>
   <br>
+  <img ng-if="users.user.role === 'Artist'" src="{{ users.user.image }}" width="150">
+  <p g-if="users.user.role === 'Artist'">{{ users.user.profile }}</p>
+
 
 <!--ARTISTS WORK-->
-  <div class="row">
-    <div ng-repeat="piece in users.user.pieces" ng-if="main.user.role === 'Artist'">
-        <div class="col-md-4">
+  <div class="row" ng-if="users.user.role === 'Artist'">
+    <h4>Work which is currently being bid on</h4>
+    <div ng-repeat="piece in users.user.pieces" ng-if="users.user.role === 'Artist'">
+        <div class="col-md-4" ng-if="piece.status === 'open'">
+          <img src="{{ piece.image}}" width="150">
+          <h4 ui-sref="piecesShow({ id: piece.id })">{{ piece.title }}</h4>
+          <h5 ng-repeat="bid in piece.bids | orderBy:'price':true | limitTo:1">Highest Bid: £ {{ bid.price }}</h5>
+        </div>
+    </div>
+  </div>
+
+  <div class="row"ng-if="users.user.role === 'Artist'">
+    <h4>Work which I have previously sold</h4>
+    <div ng-repeat="piece in users.user.pieces" ng-if="users.user.role === 'Artist'">
+        <div class="col-md-4" ng-if="piece.status === 'closed'">
           <img src="{{ piece.image}}" width="150">
           <h4 ui-sref="piecesShow({ id: piece.id })">{{ piece.title }}</h4>
           <h5 ng-repeat="bid in piece.bids | orderBy:'price':true | limitTo:1">Highest Bid: £ {{ bid.price }}</h5>

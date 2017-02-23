@@ -60,6 +60,11 @@ body {
     font-size: 40px
   }
 
+  .artistsTitle2 {
+    font-family: monospace;
+    font-size: 40px
+  }
+
   .pageTitle {
     font-family: 'Mada', sans-serif;
     font-size: 20px;
@@ -417,6 +422,16 @@ body {
       color: black;
     }
   }
+}
+
+.form-control:focus {
+  background-color: white;
+  border: white;
+}
+
+.btn:hover {
+  background-color: grey;
+  border: red;
 }
 
 .registerForm {
