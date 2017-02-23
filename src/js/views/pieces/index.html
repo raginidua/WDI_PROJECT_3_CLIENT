@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <h1 class="artistsTitle">PIECES</h1>
   <div class="row ng-repeat="piece in pieces.pieces"">
   <div class="col-md-4"><h3 ui-sref="piecesShow({ id: piece.id })">{{ piece.title }}</h3>
@@ -7,6 +7,23 @@
   <h4 ui-sref="usersShow({ id: piece.user.id })">{{ piece.user.first_name }} {{ piece.user.last_name }}</h4></div>
   <div class="col-md-4">.col-md-1</div>
   <div class="col-md-4">.col-md-1</div>
+</div> -->
+
+<!-- <div class="container">
+  <h1 class="artistsTitle">PIECES</h1>
+
+  <div class="row">
+    <ul>
+      <li ng-repeat="piece in pieces.pieces">
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <h3 ui-sref="piecesShow({ id: piece.id })">{{ piece.title }}</h3>
+          <h4>{{ piece.description }}</h4>
+          <img src="{{ piece.image }}" width="150">
+          <h4 ui-sref="usersShow({ id: piece.user.id })">{{ piece.user.first_name }} {{ piece.user.last_name }}</h4>
+        </div>
+      </li>
+    </ul>
+  </div>
 </div>
 
   <ul class="list-unstyled">
@@ -17,4 +34,24 @@
       <h4 ui-sref="usersShow({ id: piece.user.id })">{{ piece.user.first_name }} {{ piece.user.last_name }}</h4>
     </li>
   </ul>
+</div>
+
+</div> -->
+
+
+<div class="container">
+<h1 class="pieceTitle">PIECES</h1>
+<h4 class="bold">Click the title to bid on a Piece</h4>
+<div class="piecesList">
+  <ul class="list-unstyled">
+    <li ng-repeat="piece in pieces.pieces" ng-mouseenter="pieces.updateImage(piece)">
+      <!-- <h3>{{ user.id }}</h3> -->
+      <h4 class="pieceName" ui-sref="piecesShow({ id: piece.id })">{{ piece.title }}, {{ piece.user.first_name }} {{ piece.user.last_name }}</h4>
+      <h6 class="pieceDescription">{{ piece.description }}</h6>
+      <!-- <h4>{{ user.pieces }}</h4> -->
+      <br>
+    </li>
+  </ul>
+</div>
+  <div id="pieceImage" class="pieceImage"><h1>{{ imageToDisplay }}</h1></div>
 </div>

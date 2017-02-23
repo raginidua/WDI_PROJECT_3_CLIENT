@@ -17,6 +17,11 @@ function PiecesIndexCtrl(API, $http, $resource) {
     console.log('pieces', vm.pieces);
   }
 
+  vm.updateImage = (piece) => {
+    console.log(piece.image);
+    document.getElementById('pieceImage').style.backgroundImage = 'url(' + piece.image + ')';
+  };
+
   // $http({
   //   method: 'get',
   //   url: 'http://localhost:3000/pieces'
