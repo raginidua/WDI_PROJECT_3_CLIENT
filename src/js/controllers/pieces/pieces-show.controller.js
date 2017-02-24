@@ -12,6 +12,7 @@ function PiecesShowCtrl(API, $http, $stateParams, $resource) {
   const Bid = $resource(`${API}/bids/:id`,
     { id: '@_id' });
 
+
   Piece
     .get($stateParams)
     .$promise

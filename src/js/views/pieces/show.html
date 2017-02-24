@@ -13,6 +13,8 @@
       <timer end-time="pieces.closingTimeInSeconds" interval="1000">{{days}} days, {{hours}} hours, {{minutes}} minutes, {{seconds}} seconds.</timer>
     </div>
     <br>
+    <h4>Minimum Bid: £ {{ pieces.piece.minimum_bid }}</h4>
+    <br>
     <h4 ng-if="pieces.piece.bids.length !== 0">Bids</h4>
     <h5 ng-if="pieces.piece.bids.length !== 0" ng-repeat="bid in pieces.piece.bids">£ {{ bid.price }}, {{ bid.bidder.first_name }} {{ bid.bidder.last_name }}</h5>
 
@@ -25,6 +27,7 @@
         <input type="submit" name="" value="Submit">
       </form>
     </div>
+
 
   </div>
 
