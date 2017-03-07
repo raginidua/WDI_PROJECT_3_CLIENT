@@ -173,7 +173,6 @@ body {
     }
       .column1 {
         background-color: #F0F0F0;
-        // display: inline-block;
         position: relative;
         height: 100vh;
         width: 20%;
@@ -185,7 +184,6 @@ body {
       .column2 {
         background-color: #F0F0F0;
         position: relative;
-        // display: inline-block;
         height: 100vh;
         width: 20%;
         padding: 0;
@@ -197,7 +195,6 @@ body {
       .column3 {
         background-color: #F0F0F0;
         position: relative;
-        // display: inline-block;
         height: 100vh;
         width: 20%;
         padding: 0;
@@ -210,7 +207,6 @@ body {
       .column4 {
         background-color: #F0F0F0;
         position: relative;
-        // display: inline-block;
         height: 100vh;
         width: 20%;
         padding: 0;
@@ -223,11 +219,10 @@ body {
       .column5 {
         background-color: #F0F0F0;
         position: relative;
-        // display: inline-block;
         height: 100vh;
         width: 20%;
         padding: 0;
-        margin: 100;
+        margin: 0;
         margin-top: -100vh;
         left: 80%;
         transition: transform 2s;
@@ -259,23 +254,17 @@ body {
       }
       .column1Again {
         background-color: #F7F7F7;
-        // display: inline-block;
         position: relative;
         height: 100vh;
         width: 20%;
         margin: 0;
         padding: 0;
-        // transition-property: background-color, margin-top;
-        // transition-duration: 2s;
-        // transition-timing-function: linear, ease;
         transition: transform 2s;
         transition-delay: 5.5s;
-        // animation: move 3s ease;
       }
       .column2Again {
         background-color: #F7F7F7;
         position: relative;
-        // display: inline-block;
         height: 100vh;
         width: 20%;
         padding: 0;
@@ -287,7 +276,6 @@ body {
       .column3Again {
         background-color: #F7F7F7;
         position: relative;
-        // display: inline-block;
         height: 100vh;
         width: 20%;
         padding: 0;
@@ -300,7 +288,6 @@ body {
       .column4Again {
         background-color: #F7F7F7;
         position: relative;
-        // display: inline-block;
         height: 100vh;
         width: 20%;
         padding: 0;
@@ -313,7 +300,6 @@ body {
       .column5Again {
         background-color: #F7F7F7;
         position: relative;
-        // display: inline-block;
         height: 100vh;
         width: 20%;
         padding: 0;
